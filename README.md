@@ -24,6 +24,7 @@ pip install opencv-python numpy
 ```
 
 ## 项目文件结构
+```bash
 cartoon-portrait-video/
 ├── README.md               # 项目说明文档
 ├── Test.ipynb              # 主运行程序
@@ -36,6 +37,7 @@ cartoon-portrait-video/
 └── out/
     ├── mask/               # 人像掩码输出目录
     └── result/             # 图片、视频结果保存目录
+```
 
 ## 核心功能与实现流程
 1. 实时人像分割
