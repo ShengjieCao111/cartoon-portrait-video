@@ -21,6 +21,7 @@ opencv-python、numpy、昇腾ACL推理工具包
 依赖安装命令
 ```bash
 pip install opencv-python numpy
+```
 
 ## 项目文件结构
 cartoon-portrait-video/
