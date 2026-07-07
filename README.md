@@ -22,7 +22,7 @@ opencv-python、numpy、昇腾ACL推理工具包
 ```bash
 pip install opencv-python numpy
 
-项目文件结构
+## 项目文件结构
 cartoon-portrait-video/
 ├── README.md               # 项目说明文档
 ├── Test.ipynb              # 主运行程序
@@ -36,7 +36,7 @@ cartoon-portrait-video/
     ├── mask/               # 人像掩码输出目录
     └── result/             # 图片、视频结果保存目录
 
-核心功能与实现流程
+## 核心功能与实现流程
 1. 实时人像分割
 采用 portrait.om 离线模型，读取摄像头画面，完成图像解码、尺寸预处理后送入 NPU 推理，输出人像分割掩码，区分前景人像与背景。
 2. 自定义背景替换
@@ -46,7 +46,7 @@ cartoon-portrait-video/
 4. 视频录制与结果输出
 程序自动录制原始画面与风格化处理视频，保存至 out/result 目录，支持自定义录制时长。
 
-项目运行步骤
+## 项目运行步骤
 部署完成 Ascend ACL 开发环境，安装全部第三方依赖；
 将背景图片 background.jpg 放入 data 文件夹；
 将人像分割、GAN 模型文件放入 model 文件夹；
@@ -54,10 +54,10 @@ cartoon-portrait-video/
 程序自动调用摄像头，实时展示处理后的画面；
 录制结束后，在 out/result 目录查看原始视频与漫画成品视频。
 
-运行效果
+## 运行效果
 程序运行时实时输出处理画面，自动完成换背景与漫画风格转换；程序结束输出两份对比视频。依托昇腾 NPU 硬件加速，画面推理流畅，无明显卡顿延迟。
-项目难点与解决方法
 
+## 项目难点与解决方法
 1.模型推理格式适配
 难点：原图格式、尺寸与 ACL 模型输入标准不匹配
 方案：统一封装图像 JPEG 转 YUV、输入尺寸对齐预处理逻辑
